@@ -14,3 +14,4 @@
 3. **Inter-VLAN Routing** для обеспечения связи между сегментами
 
 Сценарий: Настройка сети для небольшого офиса с тремя отделами и серверной.
+<img width="933" height="646" alt="Screenshot_3" src="https://github.com/user-attachments/assets/675bd32c-b2d0-4ff9-aa35-a08b7a2e3aed" />
