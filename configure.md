@@ -65,16 +65,17 @@ switch0(config)#vlan 4  <br>
 switch0(config-vlan)# name Finance <br>  
 switch0(config-vlan)# ex <br>
 switch0(config)#vlan 5 <br>
-switch0(config-vlan)# name Servers <br>  
+switch0(config-vlan)# name `Servers` <br>  
 switch0(config-vlan)# ex <br>
-switch0(config)# int g0/1  **переходим в режим интерфейса** <br>
-switch0(config-if)# switchport mode trunk  **обозначаем интерфейс как trunk , это озночает что по нему теперь могут ходить тегированные frame** <br>
+switch0(config)# int g0/1  **переходим в режим интерфейса**  <br>
+switch0(config-if)# switchport mode trunk  **обозначаем интерфейс как trunk , это озночает что по нему теперь могут ходить тегированные frame**<br>
 switch0(config-if)# switchport trunk all vlan 2,3,4,5  **назначем номера vlan которые может пропускать этот интерфейс** <br> 
 switch0(config-if)# ex <br>
-switch0(config)# int range f0/1-2 **переходим в режим настройки нескольких интерфейсов одновременно** <br>
+switch0(config)# `int range f0/1-2` **переходим в режим настройки нескольких интерфейсов одновременно** <br>
 switch0(config-if-range)# `channel-group 1 mode active` **создаем объединенный интерфейс** <br>
 switch0(config-if-range)# ex <br>
-switch0(config)# `int Port-channel  1`  **переходим в режим объединенного интерфейса** <br>
+switch0(config)# `int Port-channel  1` **переходим в режим объединенного интерфейса**  <br> 
+
 switch0(config-if)# switchport mode trunk <br>
 switch0(config-if)# switchport trunk all vlan 2,3,4,5 <br>
 switch0(config-if)# ex <br>
@@ -109,11 +110,11 @@ switch1(config-if)# switchport mode trunk <br>
 switch1(config-if)# switchport trunk all vlan 2,3,4,5 <br>
 switch1(config-if)# ex <br>
 switch1(config)# int  f0/3 <br>
-switch1(config-if)# switchport mode access **указываем что данный интерфейс является интерфейсом доступа** <br>
-switch1(config-if)# switchport access vlan 2 **указываем vlan этого интерфейса** <br>
+switch1(config-if)# `switchport mode access` **указываем что данный интерфейс является интерфейсом доступа** <br>
+switch1(config-if)# `switchport access vlan 2` **указываем vlan этого интерфейса** <br>
 switch1(config)# int  f0/4 <br>
-switch1(config-if)# switchport mode access <br>
-switch1(config-if)# switchport access vlan3 <br>
+switch1(config-if)# `switchport mode access` <br>
+switch1(config-if)# `switchport access vlan3` <br>
 
 ### Конфигурация на  (SW2): <br>
 switch2> en  <br>
@@ -156,7 +157,7 @@ router(config-subif)# encapsulation dot1Q 2 **эта команда тегиру
 router(config-subif)# ip addr 192.168.2.1 255.255.255.0  **задаём ip адресс шлюза по умолчаннию и маску сети** <br>
 router(config-subif)# ex <br>
 router(config)# int g 0/0.3 <br>
-router(config-subif)# encapsulation dot1Q 3 <br>
+router(config-subif)# `encapsulation` dot1Q 3 <br>
 router(config-subif)# ip addr 192.168.3.1 255.255.255.0  <br>
 router(config-subif)# ex <br>
 router(config)# int g 0/0.4 <br>
@@ -167,6 +168,7 @@ router(config)# int g 0/0.5 <br>
 router(config-subif)# encapsulation dot1Q 5 <br>
 router(config-subif)# ip addr 192.168.5.1 255.255.255.0  <br>
 router(config-subif)# ex <br>
+
 
 
 
