@@ -41,7 +41,7 @@
 | 3       | Engineering | 192.168.3.0/24   | 192.168.3.1 | Инженерный отдел           |
 | 4       | Finance     | 192.168.4.0/24   | 192.168.4.1 | Финансовый отдел           |
 | 5       | Servers     | 192.168.5.0/24   | 192.168.5.1 | Серверная                  |
-<div translate="no">
+
 ## ⚡ Настройка EtherChannel
 
 ### Параметры EtherChannel:
@@ -52,6 +52,7 @@
 
 ### Схема EtherChannel соединений:
 ### Конфигурация на  (SW0):
+<div translate="no">
 switch0> en <br>
 switch0# conf t <br>
 switch0(config)#vlan 2  **создаем vlan** <br>
@@ -168,6 +169,7 @@ router(config-subif)# ip addr 192.168.5.1 255.255.255.0  <br>
 router(config-subif)# ex <br>
 </div>
  
+
 
 
 
