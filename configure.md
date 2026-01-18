@@ -1,4 +1,4 @@
-<html lang="en">
+html lang="en"
 
 ## 📊 Топология сети
                       [Router]
@@ -169,6 +169,7 @@ router(config-subif)# ip addr 192.168.5.1 255.255.255.0  <br>
 router(config-subif)# ex<br>
 
  
+
 
 
 
