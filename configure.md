@@ -53,7 +53,7 @@
 ### Схема EtherChannel соединений:
 ### Конфигурация на  (SW0):
 
-switch0> `en` <br>
+switch0> en <br>
 switch0# conf t <br>
 switch0(config)#vlan 2  **создаем vlan** <br>
 switch0(config-vlan)# name sales  **название vlan** <br>
@@ -72,7 +72,7 @@ switch0(config-if)# switchport mode trunk  **обозначаем интерфе
 switch0(config-if)# switchport trunk all vlan 2,3,4,5  **назначем номера vlan которые может пропускать этот интерфейс** <br> 
 switch0(config-if)# ex <br>
 switch0(config)# int range f0/1-2 **переходим в режим настройки нескольких интерфейсов одновременно** <br>
-switch0(config-if-range)# channel-group 1 mode active  **создаем объединенный интерфейс** <br>
+<span translate="no">switch0(config-if-range)# channel-group 1 mode active </span>  **создаем объединенный интерфейс** <br>
 switch0(config-if-range)# ex <br>
 switch0(config)# int Port-channel  1  **переходим в режим объединенного интерфейса** <br>
 switch0(config-if)# switchport mode trunk <br>
@@ -167,6 +167,7 @@ router(config)# int g 0/0.5 <br>
 router(config-subif)# encapsulation dot1Q 5 <br>
 router(config-subif)# ip addr 192.168.5.1 255.255.255.0  <br>
 router(config-subif)# ex <br>
+
 
 
 
