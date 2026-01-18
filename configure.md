@@ -52,8 +52,8 @@
 
 ### Схема EtherChannel соединений:
 ### Конфигурация на  (SW0):
-<div translate="no">
-switch0> en <br>
+
+switch0> `en` <br>
 switch0# conf t <br>
 switch0(config)#vlan 2  **создаем vlan** <br>
 switch0(config-vlan)# name sales  **название vlan** <br>
@@ -167,9 +167,6 @@ router(config)# int g 0/0.5 <br>
 router(config-subif)# encapsulation dot1Q 5 <br>
 router(config-subif)# ip addr 192.168.5.1 255.255.255.0  <br>
 router(config-subif)# ex <br>
-</div>
- 
-
 
 
 
